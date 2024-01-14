@@ -1,0 +1,42 @@
+{"items": [
+    {
+        "question": "What is the function of a transformer in an electrical circuit?",
+        "answer": "A transformer is used to increase or decrease the voltage of an alternating current (AC). It operates on the principle of electromagnetic induction and consists of primary and secondary coils."
+    },
+    {
+        "question": "What is the role of a diode in an electrical circuit?",
+        "answer": "A diode is a semiconductor device that primarily functions to allow current to pass in one direction only, acting as a one-way valve for electric current."
+    },
+    {
+        "question": "What does the term 'short circuit' mean?",
+        "answer": "A short circuit is an electrical fault where a low-resistance connection forms between two points in an electric circuit, allowing excessive current flow and potentially causing damage."
+    },
+    {
+        "question": "How does a battery generate electricity?",
+        "answer": "A battery generates electricity through a chemical reaction that creates a flow of electrons from one material to another, forming an electric current."
+    },
+    {
+        "question": "What is an inductor and what is its primary function?",
+        "answer": "An inductor is a passive electrical component that stores energy in a magnetic field when electric current flows through it. Its primary function is to resist changes in the current passing through it."
+    },
+    {
+        "question": "What is the difference between a series and parallel circuit?",
+        "answer": "In a series circuit, components are connected end-to-end, so the current flows through each component in sequence. In a parallel circuit, components are connected across common points or junctions, providing multiple paths for the current."
+    },
+    {
+        "question": "What is a multimeter and what is it used for?",
+        "answer": "A multimeter is a versatile tool used to measure electrical properties such as voltage, current, and resistance in circuits. It can also be used to test continuity, diodes, and batteries."
+    },
+    {
+        "question": "What is the principle of a relay?",
+        "answer": "A relay is an electrically operated switch that uses an electromagnet to mechanically operate a switch. It allows a circuit to be controlled by a low-power signal or by several circuits to be controlled by one signal."
+    },
+    {
+        "question": "What does \"Grounding\" or \"earthing\" mean in electrical systems?",
+        "answer": "Grounding or earthing in electrical systems refers to the practice of connecting parts of an electrical circuit to the ground, providing a safe path for excess current to dissipate into the earth, which helps prevent electric shock, fire, and other hazards."
+    },
+    {
+        "question": "What is the significance of Kirchhoff's Circuit Laws?",
+        "answer": "Kirchhoff's Circuit Laws, comprising the Current Law and the Voltage Law, are fundamental in electrical engineering. The Current Law states that the total current entering a junction equals the total current leaving it. The Voltage Law states that the total voltage around a closed loop is equal to the sum of all the voltage drops in that loop."
+    }
+]}

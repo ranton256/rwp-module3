@@ -1,0 +1,42 @@
+{"items": [
+    {
+        "question": "What does a volt represent?",
+        "answer": "A volt represents the unit of electromotive force required to drive one ampere of current against one ohm of resistance."
+    },
+    {
+        "question": "What is Ohm's Law?",
+        "answer": "Ohm's Law states that the current through a conductor between two points is directly proportional to the voltage across the two points. It is represented by the formula I = V/R, where I is the current, V is the voltage, and R is the resistance."
+    },
+    {
+        "question": "What are the three basic components of an electrical circuit?",
+        "answer": "The three basic components of an electrical circuit are a source of voltage (such as a battery), a conductive path (like a wire), and a load (like a light bulb or motor) that consumes electricity."
+    },
+    {
+        "question": "What is the difference between alternating current (AC) and direct current (DC)?",
+        "answer": "Alternating current (AC) is a type of electrical current in which the flow of electrons periodically reverses direction. In direct current (DC), the flow of electrons is in a constant direction."
+    },
+    {
+        "question": "What is the purpose of a fuse in an electrical circuit?",
+        "answer": "A fuse in an electrical circuit is a safety device that protects the circuit from excessive current. It contains a metal wire that melts and breaks the circuit if the current exceeds a safe level."
+    },
+    {
+        "question": "How is electrical power calculated?",
+        "answer": "Electrical power is calculated using the formula P = V x I, where P is the power in watts, V is the voltage in volts, and I is the current in amperes."
+    },
+    {
+        "question": "What is a capacitor used for in an electrical circuit?",
+        "answer": "A capacitor is used in an electrical circuit to store electrical energy in an electric field. It is commonly used to smooth out fluctuations in power supply, filter signals, and in timing applications."
+    },
+    {
+        "question": "What is the principle of electromagnetic induction?",
+        "answer": "The principle of electromagnetic induction is the generation of an electromotive force (EMF) across a conductor when it is exposed to a varying magnetic field. This principle is the basis of transformers, inductors, and many types of electrical motors and generators."
+    },
+    {
+        "question": "What is a resistor and what does it do?",
+        "answer": "A resistor is an electrical component that limits or regulates the flow of electrical current in a circuit. Its primary function is to provide a specific resistance to current flow."
+    },
+    {
+        "question": "What is the unit of electrical resistance?",
+        "answer": "The unit of electrical resistance is the Ohm, symbolized as Ω."
+    }
+]}

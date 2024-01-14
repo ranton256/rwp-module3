@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "rwp-module3"
+version = "0.1.0"
+description = "Module 3 of Real World Python, Developing the Backend"
+authors = ["Richard Anton <ranton@ranton.org>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+SQLAlchemy = "^2.0.25"
+pymongo = "^4.6.1"
+pydantic = "^2.5.3"
+uvicorn = "^0.25.0"
+
+[tool.mypy]
+plugins = [
+  "pydantic.mypy"
+]
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+mypy = "^1.8.0"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+flake8-unused-arguments = "^0.0.13"
+pre-commit = "^3.6.0"
+pytest = "^7.4.4"
+poetry-plugin-export = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
