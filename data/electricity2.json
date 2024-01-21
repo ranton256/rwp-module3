@@ -1,4 +1,6 @@
-{"items": [
+{
+    "title": "Electricity Two",
+    "items": [
     {
         "question": "What is the function of a transformer in an electrical circuit?",
         "answer": "A transformer is used to increase or decrease the voltage of an alternating current (AC). It operates on the principle of electromagnetic induction and consists of primary and secondary coils."

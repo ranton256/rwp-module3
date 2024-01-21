@@ -9,6 +9,7 @@ class QuizItem(BaseModel):
 
 
 class Quiz(BaseModel):
+    title: str
     items: List[QuizItem]
 
 
