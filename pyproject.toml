@@ -20,6 +20,9 @@ plugins = [
   "pydantic.mypy"
 ]
 
+[tool.isort]
+profile = "black"
+line_length = 88
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.1"
