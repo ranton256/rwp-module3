@@ -1,13 +1,13 @@
 import collections
-from dotenv import load_dotenv
 import logging
-from pymongo import MongoClient
-from bson.objectid import ObjectId 
-from pydantic import BaseModel
-from rwp_module3.card_model import Quiz
 import os
-from typing import List
 from pprint import pprint
+
+from bson.objectid import ObjectId
+from dotenv import load_dotenv
+from pymongo import MongoClient
+
+from rwp_module3.card_model import Quiz, QuizItem
 
 load_dotenv()
 
@@ -25,9 +25,10 @@ logger.info(f"MongoDB Host: {mongo_host}")
 logger.info(f"MongoDB Port: {mongo_port}")
 logger.info(f"MongoDB Username: {mongo_username}")
 
-database_name = "quizdb"   # Replace with your database name
+database_name = "quizdb"  # Replace with your database name
 
-DBConnection = collections.namedtuple('DBConnection','client db')
+DBConnection = collections.namedtuple("DBConnection", "client db")
+
 
 def connect_db():
     # Connect to MongoDB
@@ -69,7 +70,7 @@ def add_flashcard_to_quiz(conn, quiz_id, new_flashcard_data):
     existing_quiz = lookup_quiz(conn, quiz_id)
 
     if existing_quiz:
-        new_flashcard = Flashcard(**new_flashcard_data)
+        new_flashcard = QuizItem(**new_flashcard_data)
 
         # Update the existing quiz by adding the new flashcard
         existing_quiz["cards"].append(new_flashcard.dict())
@@ -83,7 +84,7 @@ def add_flashcard_to_quiz(conn, quiz_id, new_flashcard_data):
 
 def main():
     conn = connect_db()
-    
+
     insert = False
     find = True
     delquiz = True
@@ -94,7 +95,10 @@ def main():
             "items": [
                 {"question": "What is 2 + 2?", "answer": "4"},
                 {"question": "What is the capital of France?", "answer": "Paris"},
-                {"question": "Who wrote 'Romeo and Juliet'?", "answer": "William Shakespeare"},
+                {
+                    "question": "Who wrote 'Romeo and Juliet'?",
+                    "answer": "William Shakespeare",
+                },
             ]
         }
         new_quiz = Quiz(**new_quiz_data)
@@ -113,7 +117,7 @@ def main():
         my_quiz = delete_quiz(conn, my_id)
         print("deleted:", end="")
         pprint(my_quiz)
-    
+
     quizzes = all_quizzes(conn)
     for q in quizzes:
         pprint(q)
