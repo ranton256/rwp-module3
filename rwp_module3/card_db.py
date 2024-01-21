@@ -66,17 +66,15 @@ def delete_quiz(conn, quiz_id):
     return deleted_quiz
 
 
-def add_flashcard_to_quiz(conn, quiz_id, new_flashcard_data):
+def add_item_to_quiz(conn, quiz_id, new_item_data):
     existing_quiz = lookup_quiz(conn, quiz_id)
 
     if existing_quiz:
-        new_flashcard = QuizItem(**new_flashcard_data)
+        new_item = QuizItem(**new_item_data)
 
-        # Update the existing quiz by adding the new flashcard
-        existing_quiz["cards"].append(new_flashcard.dict())
+        existing_quiz["items"].append(new_item.model_dump())
 
-        # Update the quiz in MongoDB
-        quiz_collection = conn["quizzes"]
+        quiz_collection = conn.db["quizzes"]
         quiz_collection.update_one({"_id": ObjectId(quiz_id)}, {"$set": existing_quiz})
 
     return existing_quiz
@@ -87,7 +85,8 @@ def main():
 
     insert = False
     find = True
-    delquiz = True
+    delquiz = False
+    update = False
 
     if insert:
         new_quiz_data = {
@@ -107,7 +106,8 @@ def main():
         print(f"New quiz inserted with ID: {new_quiz_id}")
 
     if find:
-        my_id = "65ad7cf48947faf0cc64c245"
+        # my_id = "65ad7cf48947faf0cc64c245"
+        my_id = "65ad7edeb31f7754ac8cc21b"
         my_quiz = lookup_quiz(conn, my_id)
         print("found:", end="")
         pprint(my_quiz)
@@ -116,6 +116,13 @@ def main():
         my_id = "65ad7cf48947faf0cc64c245"
         my_quiz = delete_quiz(conn, my_id)
         print("deleted:", end="")
+        pprint(my_quiz)
+
+    if update:
+        my_id = "65ad7edeb31f7754ac8cc21b"
+        my_item = {"question": "What is 3 * 2?", "answer": "6"}
+        my_quiz = add_item_to_quiz(conn, my_id, my_item)
+        print("updated:", end="")
         pprint(my_quiz)
 
     quizzes = all_quizzes(conn)
